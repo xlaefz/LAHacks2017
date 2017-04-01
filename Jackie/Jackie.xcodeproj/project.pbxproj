@@ -240,6 +240,7 @@
 				TargetAttributes = {
 					174F66CA1E8FEEAE009A87C4 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = V5WFPWBDLH;
 						ProvisioningStyle = Automatic;
 					};
 					174F66DE1E8FEEAF009A87C4 = {
@@ -512,7 +513,9 @@
 			baseConfigurationReference = 8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5WFPWBDLH;
 				INFOPLIST_FILE = Jackie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,7 +528,9 @@
 			baseConfigurationReference = 7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5WFPWBDLH;
 				INFOPLIST_FILE = Jackie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";

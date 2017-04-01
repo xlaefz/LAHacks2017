@@ -35,12 +35,12 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         self.mapContainerView.camera = camera
         self.mapContainerView.isMyLocationEnabled = true
         
-        // Creates a marker at current location on map.
-        let marker = GMSMarker()
-        marker.position = center
-        marker.title = "Current Location"
-        marker.snippet = "XXX"
-        marker.map = self.mapContainerView
+//        // Creates a marker at current location on map.
+//        let marker = GMSMarker()
+//        marker.position = center
+//        marker.title = "Current Location"
+//        marker.snippet = "XXX"
+//        marker.map = self.mapContainerView
         
         locationManager.stopUpdatingLocation()
     }
