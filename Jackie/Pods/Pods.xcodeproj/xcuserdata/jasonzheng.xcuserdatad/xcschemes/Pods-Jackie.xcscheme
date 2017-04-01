@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "319F8F57367AA6AEF0F9762DA6C87A7C"
-               BuildableName = "libPods-Jackie.a"
+               BlueprintIdentifier = "A3ABF81673189031EC8B76AF0423131E"
+               BuildableName = "Pods_Jackie.framework"
                BlueprintName = "Pods-Jackie"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "319F8F57367AA6AEF0F9762DA6C87A7C"
-            BuildableName = "libPods-Jackie.a"
+            BlueprintIdentifier = "A3ABF81673189031EC8B76AF0423131E"
+            BuildableName = "Pods_Jackie.framework"
             BlueprintName = "Pods-Jackie"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "319F8F57367AA6AEF0F9762DA6C87A7C"
-            BuildableName = "libPods-Jackie.a"
-            BlueprintName = "Pods-Jackie"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
