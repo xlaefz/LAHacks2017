@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleMapsDirections.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GooglePlacesAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4157228FA969CD1B7BA3B424D05A3138</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55ADA012C2E824F397F11C33DAA8F776</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A5620E81B6856847F86338C25DF760C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3ABF81673189031EC8B76AF0423131E</key>
+		<key>BC7966C75765C0018C7101616AB676D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,11 +93,6 @@
 			<true/>
 		</dict>
 		<key>CBFE23DB565AE32CDB739EC0722D350B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D82432A8B6F8DD4EE7EF779662BB6361</key>
 		<dict>
 			<key>primary</key>
 			<true/>

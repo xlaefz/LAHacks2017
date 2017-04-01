@@ -12,6 +12,8 @@ target 'Jackie' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
+    pod 'GoogleMapsDirections', '~> 1.1'
+
   target 'JackieTests' do
     inherit! :search_paths
     # Pods for testing

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BC7966C75765C0018C7101616AB676D7'
-               BlueprintName = 'ObjectMapper'
+               BlueprintIdentifier = '6A5620E81B6856847F86338C25DF760C'
+               BlueprintName = 'GoogleMapsDirections'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ObjectMapper.framework'>
+               BuildableName = 'GoogleMapsDirections.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
