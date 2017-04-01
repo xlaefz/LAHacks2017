@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -300,7 +300,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TWd-Hd-SnF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uua-BA-tLP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="546"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXV-DO-bZw" customClass="GMSMapView">
