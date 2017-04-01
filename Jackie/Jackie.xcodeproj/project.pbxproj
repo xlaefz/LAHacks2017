@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BFF431E90373F006C519C /* DeliveryViewController.swift */; };
+		173BFF561E90670B006C519C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BFF551E90670B006C519C /* FirebaseManager.swift */; };
 		174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */; };
 		174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D21E8FEEAE009A87C4 /* Main.storyboard */; };
 		174F66D61E8FEEAF009A87C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D51E8FEEAF009A87C4 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 		174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66FF1E8FF99B009A87C4 /* MapViewController.swift */; };
 		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
+		36724C16D91CCE03D2FD8758 /* Pods_JackieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED37CF86E1EB8CF9EC0CB00 /* Pods_JackieTests.framework */; };
 		C6CFA8F384A6BF97076262A7 /* Pods_Jackie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF07D25EF5FCBA57819DA3C /* Pods_Jackie.framework */; };
 		EFDA259662F18FAFAD504CF9 /* Pods_JackieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4C373EF657CFB5E1F063D /* Pods_JackieUITests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		173BFF431E90373F006C519C /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		173BFF551E90670B006C519C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		174F66CB1E8FEEAE009A87C4 /* Jackie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174F66D31E8FEEAF009A87C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				101D52E25CE9332C627E7367 /* Pods_JackieTests.framework in Frameworks */,
+				36724C16D91CCE03D2FD8758 /* Pods_JackieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,7 @@
 		174F66CD1E8FEEAE009A87C4 /* Jackie */ = {
 			isa = PBXGroup;
 			children = (
+				173BFF551E90670B006C519C /* FirebaseManager.swift */,
 				174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */,
 				174F66D21E8FEEAE009A87C4 /* Main.storyboard */,
 				174F66FE1E8FF90E009A87C4 /* Controllers */,
@@ -463,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173BFF561E90670B006C519C /* FirebaseManager.swift in Sources */,
 				174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */,
 				174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */,
 				173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */,
@@ -624,6 +629,82 @@
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMapsDirections\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"GooglePlacesAPI\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -639,6 +720,82 @@
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMapsDirections\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"GooglePlacesAPI\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
