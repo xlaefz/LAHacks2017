@@ -9,22 +9,22 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-import GoogleMapsDirections
+import PXGoogleDirections
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var directionsAPI: PXGoogleDirections!
     var window: UIWindow?
     let gmsAPIKey = "AIzaSyBN34wYGKgPXzkmmD7dx0ngJVHaI5V4BoY"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Provide Google Maps API key
-        GoogleMapsDirections.provide(apiKey: gmsAPIKey)
         GMSServices.provideAPIKey(gmsAPIKey)
         GMSPlacesClient.provideAPIKey(gmsAPIKey)
-        
+        directionsAPI = PXGoogleDirections(apiKey: gmsAPIKey) // A valid server-side API key is required here
+
         return true
     }
 
