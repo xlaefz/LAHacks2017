@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */; };
+		174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D21E8FEEAE009A87C4 /* Main.storyboard */; };
+		174F66D61E8FEEAF009A87C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D51E8FEEAF009A87C4 /* Assets.xcassets */; };
+		174F66D91E8FEEAF009A87C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D71E8FEEAF009A87C4 /* LaunchScreen.storyboard */; };
+		174F66E41E8FEEAF009A87C4 /* JackieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66E31E8FEEAF009A87C4 /* JackieTests.swift */; };
+		174F66EF1E8FEEAF009A87C4 /* JackieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66EE1E8FEEAF009A87C4 /* JackieUITests.swift */; };
+		174F66FD1E8FF555009A87C4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174F66FC1E8FF555009A87C4 /* Podfile */; };
+		174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66FF1E8FF99B009A87C4 /* MapViewController.swift */; };
+		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
+		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
+		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		174F66E01E8FEEAF009A87C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 174F66C31E8FEEAE009A87C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 174F66CA1E8FEEAE009A87C4;
+			remoteInfo = Jackie;
+		};
+		174F66EB1E8FEEAF009A87C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 174F66C31E8FEEAE009A87C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 174F66CA1E8FEEAE009A87C4;
+			remoteInfo = Jackie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		174F66CB1E8FEEAE009A87C4 /* Jackie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		174F66D31E8FEEAF009A87C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		174F66D51E8FEEAF009A87C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		174F66D81E8FEEAF009A87C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		174F66DA1E8FEEAF009A87C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174F66DF1E8FEEAF009A87C4 /* JackieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		174F66E31E8FEEAF009A87C4 /* JackieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackieTests.swift; sourceTree = "<group>"; };
+		174F66E51E8FEEAF009A87C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174F66EA1E8FEEAF009A87C4 /* JackieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		174F66EE1E8FEEAF009A87C4 /* JackieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackieUITests.swift; sourceTree = "<group>"; };
+		174F66F01E8FEEAF009A87C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174F66FC1E8FF555009A87C4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		174F66FF1E8FF99B009A87C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		174F67011E90187E009A87C4 /* GMSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
+		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
+		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
+		FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jackie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		174F66C81E8FEEAE009A87C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66DC1E8FEEAF009A87C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66E71E8FEEAF009A87C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		174F66C21E8FEEAE009A87C4 = {
+			isa = PBXGroup;
+			children = (
+				174F66CD1E8FEEAE009A87C4 /* Jackie */,
+				174F66E21E8FEEAF009A87C4 /* JackieTests */,
+				174F66ED1E8FEEAF009A87C4 /* JackieUITests */,
+				174F66CC1E8FEEAE009A87C4 /* Products */,
+				2B052DD30F9269F0D2D39204 /* Pods */,
+				652F1FD4619BFC87D38F69C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		174F66CC1E8FEEAE009A87C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				174F66CB1E8FEEAE009A87C4 /* Jackie.app */,
+				174F66DF1E8FEEAF009A87C4 /* JackieTests.xctest */,
+				174F66EA1E8FEEAF009A87C4 /* JackieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		174F66CD1E8FEEAE009A87C4 /* Jackie */ = {
+			isa = PBXGroup;
+			children = (
+				174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */,
+				174F66D21E8FEEAE009A87C4 /* Main.storyboard */,
+				174F66FE1E8FF90E009A87C4 /* Controllers */,
+				174F66D51E8FEEAF009A87C4 /* Assets.xcassets */,
+				174F66D71E8FEEAF009A87C4 /* LaunchScreen.storyboard */,
+				174F66DA1E8FEEAF009A87C4 /* Info.plist */,
+				174F66FC1E8FF555009A87C4 /* Podfile */,
+			);
+			path = Jackie;
+			sourceTree = "<group>";
+		};
+		174F66E21E8FEEAF009A87C4 /* JackieTests */ = {
+			isa = PBXGroup;
+			children = (
+				174F66E31E8FEEAF009A87C4 /* JackieTests.swift */,
+				174F66E51E8FEEAF009A87C4 /* Info.plist */,
+			);
+			path = JackieTests;
+			sourceTree = "<group>";
+		};
+		174F66ED1E8FEEAF009A87C4 /* JackieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				174F66EE1E8FEEAF009A87C4 /* JackieUITests.swift */,
+				174F66F01E8FEEAF009A87C4 /* Info.plist */,
+			);
+			path = JackieUITests;
+			sourceTree = "<group>";
+		};
+		174F66FE1E8FF90E009A87C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				174F66FF1E8FF99B009A87C4 /* MapViewController.swift */,
+				174F67011E90187E009A87C4 /* GMSMapViewController.swift */,
+				174F67071E9020DA009A87C4 /* RequestViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2B052DD30F9269F0D2D39204 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */,
+				7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		652F1FD4619BFC87D38F69C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		174F66CA1E8FEEAE009A87C4 /* Jackie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174F66F31E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "Jackie" */;
+			buildPhases = (
+				0C177AE04015F6C9F5075BF5 /* [CP] Check Pods Manifest.lock */,
+				174F66C71E8FEEAE009A87C4 /* Sources */,
+				174F66C81E8FEEAE009A87C4 /* Frameworks */,
+				174F66C91E8FEEAE009A87C4 /* Resources */,
+				4084E72CF58AA0D9ECACDBD9 /* [CP] Embed Pods Frameworks */,
+				66F329017FF2250C21B8248C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jackie;
+			productName = Jackie;
+			productReference = 174F66CB1E8FEEAE009A87C4 /* Jackie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		174F66DE1E8FEEAF009A87C4 /* JackieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174F66F61E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieTests" */;
+			buildPhases = (
+				174F66DB1E8FEEAF009A87C4 /* Sources */,
+				174F66DC1E8FEEAF009A87C4 /* Frameworks */,
+				174F66DD1E8FEEAF009A87C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				174F66E11E8FEEAF009A87C4 /* PBXTargetDependency */,
+			);
+			name = JackieTests;
+			productName = JackieTests;
+			productReference = 174F66DF1E8FEEAF009A87C4 /* JackieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		174F66E91E8FEEAF009A87C4 /* JackieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174F66F91E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieUITests" */;
+			buildPhases = (
+				174F66E61E8FEEAF009A87C4 /* Sources */,
+				174F66E71E8FEEAF009A87C4 /* Frameworks */,
+				174F66E81E8FEEAF009A87C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				174F66EC1E8FEEAF009A87C4 /* PBXTargetDependency */,
+			);
+			name = JackieUITests;
+			productName = JackieUITests;
+			productReference = 174F66EA1E8FEEAF009A87C4 /* JackieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		174F66C31E8FEEAE009A87C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Jackie;
+				TargetAttributes = {
+					174F66CA1E8FEEAE009A87C4 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					174F66DE1E8FEEAF009A87C4 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 174F66CA1E8FEEAE009A87C4;
+					};
+					174F66E91E8FEEAF009A87C4 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 174F66CA1E8FEEAE009A87C4;
+					};
+				};
+			};
+			buildConfigurationList = 174F66C61E8FEEAE009A87C4 /* Build configuration list for PBXProject "Jackie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 174F66C21E8FEEAE009A87C4;
+			productRefGroup = 174F66CC1E8FEEAE009A87C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				174F66CA1E8FEEAE009A87C4 /* Jackie */,
+				174F66DE1E8FEEAF009A87C4 /* JackieTests */,
+				174F66E91E8FEEAF009A87C4 /* JackieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		174F66C91E8FEEAE009A87C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174F66D91E8FEEAF009A87C4 /* LaunchScreen.storyboard in Resources */,
+				174F66D61E8FEEAF009A87C4 /* Assets.xcassets in Resources */,
+				174F66FD1E8FF555009A87C4 /* Podfile in Resources */,
+				174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66DD1E8FEEAF009A87C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66E81E8FEEAF009A87C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C177AE04015F6C9F5075BF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4084E72CF58AA0D9ECACDBD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackie/Pods-Jackie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66F329017FF2250C21B8248C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackie/Pods-Jackie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		174F66C71E8FEEAE009A87C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */,
+				174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */,
+				174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */,
+				174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66DB1E8FEEAF009A87C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174F66E41E8FEEAF009A87C4 /* JackieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174F66E61E8FEEAF009A87C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174F66EF1E8FEEAF009A87C4 /* JackieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		174F66E11E8FEEAF009A87C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 174F66CA1E8FEEAE009A87C4 /* Jackie */;
+			targetProxy = 174F66E01E8FEEAF009A87C4 /* PBXContainerItemProxy */;
+		};
+		174F66EC1E8FEEAF009A87C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 174F66CA1E8FEEAE009A87C4 /* Jackie */;
+			targetProxy = 174F66EB1E8FEEAF009A87C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		174F66D21E8FEEAE009A87C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				174F66D31E8FEEAF009A87C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		174F66D71E8FEEAF009A87C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				174F66D81E8FEEAF009A87C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		174F66F11E8FEEAF009A87C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		174F66F21E8FEEAF009A87C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		174F66F41E8FEEAF009A87C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jackie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		174F66F51E8FEEAF009A87C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jackie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		174F66F71E8FEEAF009A87C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JackieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jackie.app/Jackie";
+			};
+			name = Debug;
+		};
+		174F66F81E8FEEAF009A87C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JackieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jackie.app/Jackie";
+			};
+			name = Release;
+		};
+		174F66FA1E8FEEAF009A87C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = JackieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Jackie;
+			};
+			name = Debug;
+		};
+		174F66FB1E8FEEAF009A87C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = JackieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Jackie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		174F66C61E8FEEAE009A87C4 /* Build configuration list for PBXProject "Jackie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174F66F11E8FEEAF009A87C4 /* Debug */,
+				174F66F21E8FEEAF009A87C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		174F66F31E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "Jackie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174F66F41E8FEEAF009A87C4 /* Debug */,
+				174F66F51E8FEEAF009A87C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		174F66F61E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174F66F71E8FEEAF009A87C4 /* Debug */,
+				174F66F81E8FEEAF009A87C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		174F66F91E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174F66FA1E8FEEAF009A87C4 /* Debug */,
+				174F66FB1E8FEEAF009A87C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 174F66C31E8FEEAE009A87C4 /* Project object */;
+}
