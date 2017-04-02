@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lobster_1.3.otf</string>
+		<string>FFF_Bold_TRIAL.ttf</string>
+		<string>FFF_Light_TRIAL.ttf</string>
+		<string>FFF_Medium_TRIAL.ttf</string>
+		<string>FFF_Regular_TRIAL.ttf</string>
+		<string>FFF_Ultra_TRIAL.ttf</string>
+		<string>BebasNeue.otf</string>
+		<string>BEBAS__.TTF</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow location</string>
 	<key>LSApplicationQueriesSchemes</key>

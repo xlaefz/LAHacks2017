@@ -157,6 +157,8 @@ class FirebaseManager {
             var jackie = Jackie()
             jackie.coordinate = location!.coordinate
             let value = snapshot.value as? NSDictionary
+            print("Snapshot: " )
+            print(snapshot)
             jackie.firstName = value?["firstName"] as? String ?? ""
             jackie.lastName = value?["lastName"] as? String ?? ""
             jackie.phoneNumber = value?["phoneNumber"] as? String ?? ""
@@ -172,16 +174,16 @@ class FirebaseManager {
     }
     
     myGroup.notify(queue: .main){
-      var telephoneToName = [String: String]()
-      for jackie in jackies {
-        telephoneToName[jackie.phoneNumber] = jackie.firstName
-      }
-      
-      Alamofire.request("http://10.203.114.4:3000/request", method: .post, parameters:telephoneToName, headers: ["Content-Type":"application/x-www-form-urlencoded"]).response { response in
-            if let error = response.error {
-              print(error)
-            }
-          }
+//      var telephoneToName = [String: String]()
+//      for jackie in jackies {
+//        telephoneToName[jackie.phoneNumber] = jackie.firstName
+//      }
+//      
+//      Alamofire.request("http://10.203.114.4:3000/request", method: .post, parameters:telephoneToName, headers: ["Content-Type":"application/x-www-form-urlencoded"]).response { response in
+//            if let error = response.error {
+//              print(error)
+//            }
+//          }
 
       completion(jackies)
     }

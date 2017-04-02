@@ -76,22 +76,23 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         
         // Add a marker on the map for each user requesting aid nearby.
         var userCoordinates = [ CLLocationCoordinate2D ]()
+        var userNames = [ String ] ()
         FirebaseManager.sharedInstance.findNearbyUsers(location: location) { jackies in
-            
             print("# of jackies")
             print(jackies.count)
             for jackie in jackies{
                 userCoordinates.append(jackie.coordinate)
-                print(jackie.coordinate)
+                userNames.append(jackie.firstName + " " + jackie.lastName)
             }
+            var i = 0;
             for coordinate in userCoordinates {
                 // Draw marker
                 let marker = GMSMarker()
                 marker.position = coordinate
                 
                 //turn donor into type of product
-                marker.title = "PENIS PENIS PENIS PENIS PENIS PENIS PENIS"
-                marker.snippet = "I LIKE DANK PENIS"
+                marker.title = userNames[i]
+                i+=1
                 
                 marker.icon = UIImage(named: "girl")
                 marker.map = self.mapContainerView
