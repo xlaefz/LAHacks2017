@@ -1,13 +1,21 @@
 import Firebase
 import FirebaseAuth
 import GeoFire
-//import CoreLocation
+import Alamofire
 
 struct Jackie {
   var firstName = ""
   var lastName = ""
   var phoneNumber = ""
   var coordinate = CLLocationCoordinate2D()
+  var uid = ""
+}
+
+enum UserState {
+  case Standby
+  case Requesting
+  case Delivering
+  case WaitingOnDelivery
 }
 
 class FirebaseManager {
@@ -152,6 +160,7 @@ class FirebaseManager {
             jackie.firstName = value?["firstName"] as? String ?? ""
             jackie.lastName = value?["lastName"] as? String ?? ""
             jackie.phoneNumber = value?["phoneNumber"] as? String ?? ""
+            jackie.uid = user
             jackies.append(jackie)
             myGroup.leave()
           }) { (error) in
@@ -163,19 +172,58 @@ class FirebaseManager {
     }
     
     myGroup.notify(queue: .main){
-      completion(jackies);
+      var telephoneToName = [String: String]()
+      for jackie in jackies {
+        telephoneToName[jackie.phoneNumber] = jackie.firstName
+      }
+      
+//      Alamofire.request("http://10.203.114.4:3000/request", method: .POST, headers: ["Content-Type":"application/x-www-form-urlencoded"], parameters:telephoneToName).response(completionHandler: {
+//                          (request, response, data, error) in
+//                          print(request)
+//                          print(response)
+//                          print(data)
+//                          print(error)
+//                        })
+
+      completion(jackies)
     }
   }
   
   
-  //    func request(requesting, productType) {
-  //      //Change current user state to requesting
-  //      //Change productType to correct type
-  //    }
-  //
-  //    func respond(userRequesting) {
-  //      //Change currentUser to Delivery
-  //      //Change userRequesting to WaitingForDelivery
-  //    }
+    func request(productType: String) {
+      //Change current user state to requesting
+      let userID = FIRAuth.auth()?.currentUser!.uid
+      self.ref.child("users").child(userID!).child("stateInfo").setValue(["stateName": UserState.Requesting])
+      //Change productType to correct type
+      self.ref.child("users").child(userID!).child("stateInfo").setValue(["stateOption": productType])
+    }
+  
+  func respond(userRequesting:Jackie) {
+        //Change currentUser to Delivery
+        let userID = FIRAuth.auth()?.currentUser!.uid
+        self.ref.child("users").child(userID!).child("stateInfo").setValue(["stateName": UserState.Delivering])
+        self.ref.child("users").child(userID!).child("stateInfo").setValue(["stateOption": userRequesting.uid])
+    
+        //Change userRequesting to WaitingForDelivery
+        self.ref.child("users").child(userRequesting.uid).child("stateInfo").setValue(["stateName":UserState.WaitingOnDelivery])
+        self.ref.child("users").child(userRequesting.uid).child("stateInfo").setValue(["stateOption":userID!])
+  }
+  
+  func moveToStandby(stateName: UserState){
+    let userID = FIRAuth.auth()?.currentUser!.uid
+    
+    self.ref.child("users").child(userID!).child("stateInfo").setValue(["stateName": UserState.Standby])
+    
+    if (stateName == UserState.Delivering || stateName == UserState.WaitingOnDelivery) {
+    self.ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+      // Get user value
+      let value = snapshot.value as? NSDictionary
+      var respectiveUid = value?["stateOption"] as? String ?? ""
+      self.ref.child("users").child(respectiveUid).child("stateInfo").setValue(["stateName": UserState.Standby])
+    }) { (error) in
+      print(error.localizedDescription)
+      }
+    }
+  }
   
 }
