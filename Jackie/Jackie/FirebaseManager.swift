@@ -177,13 +177,11 @@ class FirebaseManager {
         telephoneToName[jackie.phoneNumber] = jackie.firstName
       }
       
-//      Alamofire.request("http://10.203.114.4:3000/request", method: .POST, headers: ["Content-Type":"application/x-www-form-urlencoded"], parameters:telephoneToName).response(completionHandler: {
-//                          (request, response, data, error) in
-//                          print(request)
-//                          print(response)
-//                          print(data)
-//                          print(error)
-//                        })
+      Alamofire.request("http://10.203.114.4:3000/request", method: .post, parameters:telephoneToName, headers: ["Content-Type":"application/x-www-form-urlencoded"]).response { response in
+            if let error = response.error {
+              print(error)
+            }
+          }
 
       completion(jackies)
     }
