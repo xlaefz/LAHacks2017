@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import GoogleMapsDirections
 
 class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -24,6 +25,9 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        
+        // Show directions
+        //showDirectionsToDestination();
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
