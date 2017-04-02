@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "174F66CA1E8FEEAE009A87C4"
-               BuildableName = "Jackie.app"
-               BlueprintName = "Jackie"
-               ReferencedContainer = "container:Jackie.xcodeproj">
+               BlueprintIdentifier = "D82432A8B6F8DD4EE7EF779662BB6361"
+               BuildableName = "ObjectMapper.framework"
+               BlueprintName = "ObjectMapper"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,36 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "174F66DE1E8FEEAF009A87C4"
-               BuildableName = "JackieTests.xctest"
-               BlueprintName = "JackieTests"
-               ReferencedContainer = "container:Jackie.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "174F66E91E8FEEAF009A87C4"
-               BuildableName = "JackieUITests.xctest"
-               BlueprintName = "JackieUITests"
-               ReferencedContainer = "container:Jackie.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "174F66CA1E8FEEAE009A87C4"
-            BuildableName = "Jackie.app"
-            BlueprintName = "Jackie"
-            ReferencedContainer = "container:Jackie.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -71,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "174F66CA1E8FEEAE009A87C4"
-            BuildableName = "Jackie.app"
-            BlueprintName = "Jackie"
-            ReferencedContainer = "container:Jackie.xcodeproj">
+            BlueprintIdentifier = "D82432A8B6F8DD4EE7EF779662BB6361"
+            BuildableName = "ObjectMapper.framework"
+            BlueprintName = "ObjectMapper"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "174F66CA1E8FEEAE009A87C4"
-            BuildableName = "Jackie.app"
-            BlueprintName = "Jackie"
-            ReferencedContainer = "container:Jackie.xcodeproj">
+            BlueprintIdentifier = "D82432A8B6F8DD4EE7EF779662BB6361"
+            BuildableName = "ObjectMapper.framework"
+            BlueprintName = "ObjectMapper"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

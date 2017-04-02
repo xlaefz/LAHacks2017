@@ -23,30 +23,32 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
     locationManager.requestWhenInUseAuthorization()
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
     locationManager.startUpdatingLocation()
-  }
-  
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    let userLocation = locations.last
-    let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
     
-    let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
-                                          longitude: userLocation!.coordinate.longitude, zoom: 16)
-    self.mapContainerView.camera = camera
-    self.mapContainerView.isMyLocationEnabled = true
-    
-    // Creates a marker at current location on map.
-    let marker = GMSMarker()
-    marker.position = center
-    marker.title = "Current Location"
-    marker.snippet = "XXX"
-    marker.map = self.mapContainerView
-    
-    locationManager.stopUpdatingLocation()
+    // Show directions
+    //showDirectionsToDestination();
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation = locations.last
+        let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
+                                                          longitude: userLocation!.coordinate.longitude, zoom: 16)
+        self.mapContainerView.camera = camera
+        self.mapContainerView.isMyLocationEnabled = true
+        
+//        // Creates a marker at current location on map.
+//        let marker = GMSMarker()
+//        marker.position = center
+//        marker.title = "Current Location"
+//        marker.snippet = "XXX"
+//        marker.map = self.mapContainerView
+        
+        locationManager.stopUpdatingLocation()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }
