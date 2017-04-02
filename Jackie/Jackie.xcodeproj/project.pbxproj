@@ -19,6 +19,7 @@
 		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
 		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
+		88B5C2B11E90B26200ABBCF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		174F67011E90187E009A87C4 /* GMSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
 		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
+		88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
 		FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jackie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 				174F67011E90187E009A87C4 /* GMSMapViewController.swift */,
 				174F67071E9020DA009A87C4 /* RequestViewController.swift */,
 				173BFF431E90373F006C519C /* DeliveryViewController.swift */,
+				88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */,
 				174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */,
 				174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */,
+				88B5C2B11E90B26200ABBCF5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
