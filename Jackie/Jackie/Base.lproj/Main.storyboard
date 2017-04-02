@@ -674,7 +674,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="placeholder" width="256" height="256"/>
+        <image name="placeholder" width="120" height="120"/>
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
