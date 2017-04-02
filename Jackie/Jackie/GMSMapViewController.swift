@@ -47,7 +47,7 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     func showDirectionsView() {
         // Show the directions view with proper destination address
         locationManager.stopUpdatingLocation()
-        var directionsViewController = DirectionsViewController.instantiate()
+        let directionsViewController = DirectionsViewController.instantiate()
         self.present(directionsViewController, animated: true, completion: nil)
         directionsViewController.destinationCoordinate = nil
         // Set destination coordinate of direction view controller
@@ -57,7 +57,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let userLocation = locations.last
-        let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         currLocation = userLocation!.coordinate
         
         // Shift camera to current location
@@ -92,40 +91,19 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
                 
                 //turn donor into type of product
                 marker.title = userNames[i]
-                i+=1
+                i += 1
                 
-                marker.icon = UIImage(named: "girl")
+                marker.icon = UIImage(named: "marker")
                 marker.map = self.mapContainerView
                 
                 // Draw circle
-                let circle = GMSCircle(position: coordinate, radius: 100)
-                circle.fillColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 0.1)
-                circle.strokeColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.3)
-                circle.strokeWidth = 2
+                let circle = GMSCircle(position: coordinate, radius: 50)
+                circle.fillColor = UIColor(red: 240/255, green: 93/255, blue: 94/255, alpha: 0.1)
+                circle.strokeColor = UIColor(red: 240/255, green: 93/255, blue: 94/255, alpha: 0.3)
+                circle.strokeWidth = 1
                 circle.map = self.mapContainerView
             }
         }
-        
-//        userCoordinates.append(currLocation!)   // GET RID OF THIS LATER :O
-        
-//        for coordinate in userCoordinates {
-//            // Draw marker
-//            let marker = GMSMarker()
-//            marker.position = coordinate
-//            
-//            //turn donor into type of product
-//            marker.title = "Donor"
-//            
-//            marker.icon = UIImage(named: "girl")
-//            marker.map = self.mapContainerView
-//            
-//            // Draw circle
-//            let circle = GMSCircle(position: coordinate, radius: 100)
-//            circle.fillColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 0.1)
-//            circle.strokeColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.3)
-//            circle.strokeWidth = 2
-//            circle.map = self.mapContainerView
-//        }
     }
     
     func focusMapToShowAllMarkers() {

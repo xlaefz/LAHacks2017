@@ -44,7 +44,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate {
                                               longitude: userLocation!.coordinate.longitude, zoom: 16)
         
         if(mapContainerView == nil) {
-            print("hello mapcontainerview is nil")
+            print("mapcontainerview is nil")
         }
         else {
             print("mapcontainerview is not nil")
@@ -57,8 +57,6 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate {
             marker.title = "Current Location"
             marker.snippet = "XXX"
             marker.map = self.mapContainerView
-            
-            //        locationManager.stopUpdatingLocation()
             
             // Update directions to destination
             let originCoordinate = GoogleMapsService.LocationCoordinate2D.init(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
@@ -88,10 +86,32 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate {
             let path = GMSMutablePath(fromEncodedPath: (response?.routes[0].overviewPolylinePoints)!)
             let polyLine = GMSPolyline(path: path)
             polyLine.strokeWidth = 5
-            polyLine.strokeColor = UIColor.yellow
+            polyLine.strokeColor = self.hexStringToUIColor(hex: "F05D5E")
             polyLine.map = self.mapContainerView
             debugPrint("it has \(response?.routes.count ?? 0) routes")
         }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     override func didReceiveMemoryWarning() {
