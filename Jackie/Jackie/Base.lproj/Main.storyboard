@@ -55,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-JW-chq">
                                 <rect key="frame" x="41" y="299" width="54" height="21"/>
@@ -84,7 +84,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jkq-fl-a9C" kind="show" id="OhK-MK-05r"/>
+                                    <action selector="signInButtonPress:" destination="p9y-x6-QPi" eventType="touchUpInside" id="pk7-GZ-U7p"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKz-MD-YNK">
@@ -100,6 +100,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="OPK-Sd-z03" id="ZmH-DT-439"/>
+                        <outlet property="passwordTF" destination="sHJ-Bo-3DF" id="l5H-E9-act"/>
+                        <segue destination="Jkq-fl-a9C" kind="show" identifier="signInSegue" id="Obm-BS-NFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQI-cs-m6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,13 +189,13 @@
                                 <rect key="frame" x="127" y="363" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Lm-4W-sV5">
                                 <rect key="frame" x="127" y="415" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5n-cD-5Iu">
                                 <rect key="frame" x="123" y="67" width="129" height="48"/>
@@ -227,11 +232,11 @@
                                 <rect key="frame" x="112" y="560" width="151" height="48"/>
                                 <color key="backgroundColor" red="0.83137254901960789" green="0.23921568627450981" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jkq-fl-a9C" kind="show" id="8yh-jh-aRb"/>
+                                    <action selector="signUpButtonPress:" destination="R6t-sF-rnL" eventType="touchUpInside" id="vQk-xo-xAB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,6 +297,15 @@
                             <constraint firstItem="hrJ-Sz-Jd2" firstAttribute="leading" secondItem="I79-SZ-mCZ" secondAttribute="leading" id="xUt-TI-V9F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTF" destination="8Lm-4W-sV5" id="Kkj-bf-WDR"/>
+                        <outlet property="emailTF" destination="RL4-3e-s3t" id="LGa-Sj-Q34"/>
+                        <outlet property="firstNameTF" destination="GYO-m1-0xt" id="uTR-oj-Got"/>
+                        <outlet property="lastNameTF" destination="Ol7-eP-PDv" id="Z3Y-6U-WCw"/>
+                        <outlet property="passwordTF" destination="q2Q-0X-eNH" id="Xq2-tY-8af"/>
+                        <outlet property="phoneNumberTF" destination="WcN-Ki-b32" id="kWa-Z2-yP0"/>
+                        <segue destination="Jkq-fl-a9C" kind="show" identifier="signUpSegue" id="Phh-1L-srP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WU2-mo-ByI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -315,7 +329,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Has Tampon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-Dj-Dy7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have Tampons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-Dj-Dy7">
                                                     <rect key="frame" x="8" y="8" width="119" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
@@ -339,7 +353,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Has Pad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTY-k2-H0j">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have Pads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTY-k2-H0j">
                                                     <rect key="frame" x="8" y="4" width="119" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
@@ -682,8 +696,8 @@
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8yh-jh-aRb"/>
-        <segue reference="aaa-z7-GKa"/>
+        <segue reference="Obm-BS-NFc"/>
         <segue reference="P9h-P1-3ey"/>
+        <segue reference="aaa-z7-GKa"/>
     </inferredMetricsTieBreakers>
 </document>

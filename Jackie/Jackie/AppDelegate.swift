@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
 import GoogleMaps
 import GooglePlaces
 import GoogleMapsDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-    let gmsAPIKey = "AIzaSyC2Wg0GmSjaRsqnKmzw8ua_MmfHJOH6OQQ"
+    let gmsAPIKey = "AIzaSyBN34wYGKgPXzkmmD7dx0ngJVHaI5V4BoY"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //Provide Google Maps API key
+        //GoogleMapsDirections.provide(apiKey: gmsAPIKey)
+        
+        FIRApp.configure()
+      
         // Provide Google Maps API key
         GMSServices.provideAPIKey(gmsAPIKey)
         GMSPlacesClient.provideAPIKey(gmsAPIKey)

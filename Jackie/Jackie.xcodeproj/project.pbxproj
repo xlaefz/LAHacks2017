@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BFF431E90373F006C519C /* DeliveryViewController.swift */; };
+		173BFFC81E907F61006C519C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 173BFFC71E907F61006C519C /* GoogleService-Info.plist */; };
 		174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */; };
 		174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D21E8FEEAE009A87C4 /* Main.storyboard */; };
 		174F66D61E8FEEAF009A87C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D51E8FEEAF009A87C4 /* Assets.xcassets */; };
 		174F66D91E8FEEAF009A87C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D71E8FEEAF009A87C4 /* LaunchScreen.storyboard */; };
 		174F66E41E8FEEAF009A87C4 /* JackieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66E31E8FEEAF009A87C4 /* JackieTests.swift */; };
 		174F66EF1E8FEEAF009A87C4 /* JackieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66EE1E8FEEAF009A87C4 /* JackieUITests.swift */; };
-		174F66FD1E8FF555009A87C4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174F66FC1E8FF555009A87C4 /* Podfile */; };
 		174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66FF1E8FF99B009A87C4 /* MapViewController.swift */; };
 		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
 		17F01D0A1E90ADB4006C7572 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F01D091E90ADB4006C7572 /* DirectionsViewController.swift */; };
 		17FF00821E90A5EA001E882A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00811E90A5EA001E882A /* LoginViewController.swift */; };
 		17FF00841E90A5F7001E882A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00831E90A5F7001E882A /* RegisterViewController.swift */; };
+		7377BC38FC049FE95A0ADD31 /* Pods_Jackie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */; };
+		FA8CCA921E90B6D200D94F35 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */; };
 		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
 		88B5C2B11E90B26200ABBCF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		173BFF431E90373F006C519C /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		173BFFC71E907F61006C519C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		174F66CB1E8FEEAE009A87C4 /* Jackie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174F66D31E8FEEAF009A87C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,16 +59,17 @@
 		174F66EA1E8FEEAF009A87C4 /* JackieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JackieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		174F66EE1E8FEEAF009A87C4 /* JackieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackieUITests.swift; sourceTree = "<group>"; };
 		174F66F01E8FEEAF009A87C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		174F66FC1E8FF555009A87C4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		174F66FF1E8FF99B009A87C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		174F67011E90187E009A87C4 /* GMSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
 		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		17F01D091E90ADB4006C7572 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		17FF00811E90A5EA001E882A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17FF00831E90A5F7001E882A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jackie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
 		88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
+		FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7377BC38FC049FE95A0ADD31 /* Pods_Jackie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,7 @@
 		174F66C21E8FEEAE009A87C4 = {
 			isa = PBXGroup;
 			children = (
+				173BFFC71E907F61006C519C /* GoogleService-Info.plist */,
 				174F66CD1E8FEEAE009A87C4 /* Jackie */,
 				174F66E21E8FEEAF009A87C4 /* JackieTests */,
 				174F66ED1E8FEEAF009A87C4 /* JackieUITests */,
@@ -118,13 +124,13 @@
 		174F66CD1E8FEEAE009A87C4 /* Jackie */ = {
 			isa = PBXGroup;
 			children = (
+				FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */,
 				174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */,
 				174F66D21E8FEEAE009A87C4 /* Main.storyboard */,
 				174F66FE1E8FF90E009A87C4 /* Controllers */,
 				174F66D51E8FEEAF009A87C4 /* Assets.xcassets */,
 				174F66D71E8FEEAF009A87C4 /* LaunchScreen.storyboard */,
 				174F66DA1E8FEEAF009A87C4 /* Info.plist */,
-				174F66FC1E8FF555009A87C4 /* Podfile */,
 			);
 			path = Jackie;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 		652F1FD4619BFC87D38F69C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,8 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				174F66D91E8FEEAF009A87C4 /* LaunchScreen.storyboard in Resources */,
+				173BFFC81E907F61006C519C /* GoogleService-Info.plist in Resources */,
 				174F66D61E8FEEAF009A87C4 /* Assets.xcassets in Resources */,
-				174F66FD1E8FF555009A87C4 /* Podfile in Resources */,
 				174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +376,7 @@
 				174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */,
 				17FF00841E90A5F7001E882A /* RegisterViewController.swift in Sources */,
 				174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */,
+				FA8CCA921E90B6D200D94F35 /* FirebaseManager.swift in Sources */,
 				17F01D0A1E90ADB4006C7572 /* DirectionsViewController.swift in Sources */,
 				173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */,
 				174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */,
@@ -534,6 +542,72 @@
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -553,6 +627,72 @@
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GoogleMaps\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -592,6 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JackieUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,6 +746,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JackieUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.JackieUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

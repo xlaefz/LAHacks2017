@@ -5,30 +5,28 @@
 //  Created by Yuna Lee on 4/1/17.
 //  Copyright © 2017 Jackie. All rights reserved.
 //
-
 import UIKit
 import GoogleMaps
 import GooglePlaces
-import GoogleMapsDirections
 
 class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
-
-    @IBOutlet weak var mapContainerView: GMSMapView!
+  
+  @IBOutlet weak var mapContainerView: GMSMapView!
+  
+  var locationManager = CLLocationManager()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    var locationManager = CLLocationManager()
+    // Set current location
+    locationManager.delegate = self
+    locationManager.requestWhenInUseAuthorization()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.startUpdatingLocation()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Set current location
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-        
-        // Show directions
-        //showDirectionsToDestination();
-    }
+    // Show directions
+    //showDirectionsToDestination();
+  }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
@@ -53,5 +51,4 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
