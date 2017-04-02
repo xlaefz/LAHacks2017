@@ -33,6 +33,8 @@ under your account. The phone number should be in
 
 To launch the application, you can use `node .` in the project's root directory. 
 
-To send notifications, connect to the endpoint at http://SERVER_IP:3000/request, make a x-www-form-urlencoded POST request, with parameters specified as PHONE_NUMBER = NAME_OF_USER. The telephone format must be a 11-digit number starting with +1, followed by 1 digit country code, 3 digit area code, and 7 digit phone number. As an example, ```+12345678910```
+To send notifications, connect to the endpoint at http://SERVER_IP:3000/request, make an application/x-www-form-urlencoded POST request, with parameters specified as PHONE_NUMBER = NAME_OF_USER. The telephone format must be a 11-digit number starting with +1, followed by 1 digit country code, 3 digit area code, and 7 digit phone number. As an example, ```+12345678910```
+
+For Swift3 users, take a look at  ```gist.request.swift``` in the same directory.
 
 Modified from the [Twilio example repo](https://github.com/TwilioDevEd/server-notifications-node) 
