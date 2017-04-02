@@ -8,7 +8,6 @@
 
 import UIKit
 import GoogleMaps
-import GooglePlaces
 import PXGoogleDirections
 
 class GMSMapViewController: UIViewController, CLLocationManagerDelegate {

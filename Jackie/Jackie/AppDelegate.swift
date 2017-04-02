@@ -7,11 +7,10 @@
 //
 
 import UIKit
+import Firebase
 import GoogleMaps
-import GooglePlaces
 import PXGoogleDirections
 
-import Firebase
 
 
 @UIApplicationMain
@@ -29,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Provide Google Maps API key
         GMSServices.provideAPIKey(gmsAPIKey)
-        GMSPlacesClient.provideAPIKey(gmsAPIKey)
         directionsAPI = PXGoogleDirections(apiKey: gmsAPIKey) // A valid server-side API key is required here
 
         return true
