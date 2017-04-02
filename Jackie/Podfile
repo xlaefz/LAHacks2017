@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
-use_frameworks!
+#use_frameworks!
 
 target 'Jackie' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,10 +9,12 @@ target 'Jackie' do
   
   # Pods for Jackie
     pod 'GoogleMaps'
+    pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     pod 'GooglePlaces'
     pod 'GoogleMapsDirections', '~> 1.1'
     pod 'AFNetworking', '~> 3.0'
+    pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 end

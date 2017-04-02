@@ -66,7 +66,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         
         // Clear and add markers
         addRequestingAidMarkers()
-        
         locationManager.stopUpdatingLocation()
     }
     
