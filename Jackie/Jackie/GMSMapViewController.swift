@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import FirebaseDatabase
 
 class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
@@ -65,36 +66,65 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         self.mapContainerView.isMyLocationEnabled = true
         
         // Clear and add markers
-        addRequestingAidMarkers()
+        addRequestingAidMarkers(userLocation!)
         locationManager.stopUpdatingLocation()
     }
     
-    func addRequestingAidMarkers() {
+    func addRequestingAidMarkers(_ location:CLLocation) {
         // Clear existing markers
         self.mapContainerView.clear()
         
         // Add a marker on the map for each user requesting aid nearby.
         var userCoordinates = [ CLLocationCoordinate2D ]()
-        userCoordinates.append(currLocation!)   // GET RID OF THIS LATER :O
-        
-        for coordinate in userCoordinates {
-            // Draw marker
-            let marker = GMSMarker()
-            marker.position = coordinate
+        FirebaseManager.sharedInstance.findNearbyUsers(location: location) { jackies in
             
-            //turn donor into type of product
-            marker.title = "Donor"
-            
-            marker.icon = UIImage(named: "girl")
-            marker.map = self.mapContainerView
-            
-            // Draw circle
-            let circle = GMSCircle(position: coordinate, radius: 100)
-            circle.fillColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 0.1)
-            circle.strokeColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.3)
-            circle.strokeWidth = 2
-            circle.map = self.mapContainerView
+            print("# of jackies")
+            print(jackies.count)
+            for jackie in jackies{
+                userCoordinates.append(jackie.coordinate)
+                print(jackie.coordinate)
+            }
+            for coordinate in userCoordinates {
+                // Draw marker
+                let marker = GMSMarker()
+                marker.position = coordinate
+                
+                //turn donor into type of product
+                marker.title = "PENIS PENIS PENIS PENIS PENIS PENIS PENIS"
+                marker.snippet = "I LIKE DANK PENIS"
+                
+                marker.icon = UIImage(named: "girl")
+                marker.map = self.mapContainerView
+                
+                // Draw circle
+                let circle = GMSCircle(position: coordinate, radius: 100)
+                circle.fillColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 0.1)
+                circle.strokeColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.3)
+                circle.strokeWidth = 2
+                circle.map = self.mapContainerView
+            }
         }
+        
+//        userCoordinates.append(currLocation!)   // GET RID OF THIS LATER :O
+        
+//        for coordinate in userCoordinates {
+//            // Draw marker
+//            let marker = GMSMarker()
+//            marker.position = coordinate
+//            
+//            //turn donor into type of product
+//            marker.title = "Donor"
+//            
+//            marker.icon = UIImage(named: "girl")
+//            marker.map = self.mapContainerView
+//            
+//            // Draw circle
+//            let circle = GMSCircle(position: coordinate, radius: 100)
+//            circle.fillColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 0.1)
+//            circle.strokeColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.3)
+//            circle.strokeWidth = 2
+//            circle.map = self.mapContainerView
+//        }
     }
     
     func focusMapToShowAllMarkers() {
