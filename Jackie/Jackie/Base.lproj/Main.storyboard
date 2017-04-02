@@ -24,10 +24,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="FoC-st-ijP">
             <objects>
-                <viewController id="p9y-x6-QPi" sceneMemberID="viewController">
+                <viewController id="p9y-x6-QPi" customClass="LoginViewController" customModule="Jackie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5lQ-Lh-hlR"/>
                         <viewControllerLayoutGuide type="bottom" id="U4C-Vu-cHc"/>
@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-1583.2" y="408.84557721139436"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Dby-nX-X6v">
             <objects>
-                <viewController id="R6t-sF-rnL" sceneMemberID="viewController">
+                <viewController id="R6t-sF-rnL" customClass="RegisterViewController" customModule="Jackie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Za0-kN-J48"/>
                         <viewControllerLayoutGuide type="bottom" id="eRX-lK-U8B"/>
