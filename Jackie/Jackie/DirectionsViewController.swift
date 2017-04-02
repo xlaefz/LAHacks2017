@@ -27,7 +27,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         // Show directions
-        showDirectionsToDestination();
+        //showDirectionsToDestination(); TO-DO
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -56,7 +56,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate {
         //        let destinationCoordinate =
         let destination = GoogleMapsDirections.Place.stringDescription(address: "1455 Market St #400, San Francisco, United States")
         
-        showDirectionsToDestination(origin, destination)
+        showDirectionsToDestination(origin: origin, destination: destination)
     }
     
     func showDirectionsToDestination(origin: GoogleMapsDirections.Place, destination: GoogleMapsDirections.Place) {

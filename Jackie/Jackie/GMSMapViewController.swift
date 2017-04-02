@@ -27,7 +27,7 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         // Show directions
-        showDirectionsToDestination();
+        //showDirectionsToDestination();
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
