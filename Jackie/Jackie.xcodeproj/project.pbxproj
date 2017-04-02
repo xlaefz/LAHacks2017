@@ -21,6 +21,8 @@
 		17F01D0A1E90ADB4006C7572 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F01D091E90ADB4006C7572 /* DirectionsViewController.swift */; };
 		17FF00821E90A5EA001E882A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00811E90A5EA001E882A /* LoginViewController.swift */; };
 		17FF00841E90A5F7001E882A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00831E90A5F7001E882A /* RegisterViewController.swift */; };
+		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
+		88B5C2B11E90B26200ABBCF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		17FF00811E90A5EA001E882A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17FF00831E90A5F7001E882A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
+		88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +157,7 @@
 				174F67071E9020DA009A87C4 /* RequestViewController.swift */,
 				173BFF431E90373F006C519C /* DeliveryViewController.swift */,
 				17F01D091E90ADB4006C7572 /* DirectionsViewController.swift */,
+				88B5C2B01E90B26200ABBCF5 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +249,7 @@
 				TargetAttributes = {
 					174F66CA1E8FEEAE009A87C4 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = V5WFPWBDLH;
 						ProvisioningStyle = Automatic;
 					};
 					174F66DE1E8FEEAF009A87C4 = {
@@ -368,6 +373,7 @@
 				173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */,
 				174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */,
 				174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */,
+				88B5C2B11E90B26200ABBCF5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +530,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
 				);
+				DEVELOPMENT_TEAM = V5WFPWBDLH;
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -542,6 +549,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
 				);
+				DEVELOPMENT_TEAM = V5WFPWBDLH;
 				INFOPLIST_FILE = Jackie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
