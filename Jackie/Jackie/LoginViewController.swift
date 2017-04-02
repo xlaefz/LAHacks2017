@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
   @IBAction func signInButtonPress(_ sender: Any) {
       FirebaseManager.sharedInstance.signInUser(email: emailTF.text!, password: passwordTF.text!) { (successful) in
         if (successful) {
-          self.performSegue(withIdentifier: "loginSegue", sender: self)
+          self.performSegue(withIdentifier: "signInSegue", sender: self)
         } else {
           self.showAlert("Invalid Username or Password.")
         }

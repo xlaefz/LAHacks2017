@@ -43,7 +43,7 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
 //        marker.title = "Current Location"
 //        marker.snippet = "XXX"
 //        marker.map = self.mapContainerView
-        
+
         locationManager.stopUpdatingLocation()
     }
 

@@ -1,11 +1,20 @@
 import Firebase
+import FirebaseAuth
+import GeoFire
 //import CoreLocation
+
+struct Jackie {
+  var firstName = ""
+  var lastName = ""
+  var phoneNumber = ""
+  var coordinate = CLLocationCoordinate2D()
+}
 
 class FirebaseManager {
   static let sharedInstance = FirebaseManager();
   
   let ref = FIRDatabase.database().reference()
-  let circleQuery: AnyObject? = nil;
+  var circleQuery: GFCircleQuery? = nil;
   
   private init() {}
   
@@ -64,63 +73,100 @@ class FirebaseManager {
     completion(true)
   }
   
-  //    func updateUserLocation(location: CLLocation, completion: (_ successful : Bool) -> Void) {
-  //      let geoFire = GeoFire(firebaseRef: ref.child("users_location"))
-  //
-  //      if let myLocation = location {
-  //
-  //          let userID = FIRAuth.auth()!.createUser!.uid
-  //          geoFire!.setLocation(myLocation, forKey: userID) { (error) in
-  //              if (error != nil) {
-  //                  debugPrint("An error occured in updateUserLocation in SetLocation: \(error)")
-  //              } else {
-  //                  print("Saved location successfully!")
-  //
-  //                  //Update circleQuery
-  //                  if circleQuery != nil {
-  //                      circleQuery.center = myLocation
-  //                  }
-  //              }
-  //          }
-  //      }
-  //
-  //    }
+      func updateUserLocation(location: CLLocation, completion: (_ successful : Bool) -> Void) {
+        let geoFire = GeoFire(firebaseRef: ref.child("users_location"))
+  
+        let userID = FIRAuth.auth()?.currentUser!.uid
+        geoFire!.setLocation(location, forKey: userID) { (error) in
+            if (error != nil) {
+                debugPrint("An error occured in updateUserLocation in SetLocation: \(error)")
+            } else {
+                print("Saved location successfully!")
+
+                //Update circleQuery
+//                if circleQuery != nil {
+//                    circleQuery.center = location
+//                }
+            }
+        }
+      }
   //
   //
   //    //Needs better closure, how would the app run
   //    //Create 2 closures for key enter and key exit handling
   //    //One for initial nearby users
   //    //Only find those requesting
-  //    func findNearbyUsers(location: CLLocation, completion: (_ successful : Bool) -> Void) {
-  //      if let myLocation = location {
-  //          let geoFire = GeoFire(firebaseRef: ref.child("users_location"))
-  //          let circleQuery = geoFire!.query(at: location, withRadius: 0.2)
-  //
-  //          _ = circleQuery!.observe(.keyEntered, with: { (key, location) in
-  //              if !self.nearbyUsers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
-  //                  self.nearbyUsers.append(key!)
-  //              }
-  //          })
-  //
-  //          circleQuery?.observeReady({
-  //              for user in self.nearbyUsers {
-  //                  self.ref.child("users/\(user)").observe(.value, with: { snapshot in
-  //                      let value = snapshot as? NSDictionary
-  //                      print(value)
-  //                  })
-  //              }
-  //          })
-  //
-  //          //Handle key enter and key exit events with closures
-  //          var keyEnteredQueryHandle = circleQuery.observeEventType(.KeyEntered, withBlock: { (key: String!, location: CLLocation!) in
-  //            println("Key '\(key)' entered the search area and is at location '\(location)'")
-  //          })
-  //
-  //          var keyExitedQueryHandle = circleQuery.observeEventType(.KeyExited, withBlock: { (key: String!, location: CLLocation!) in
-  //            println("Key '\(key)' exited the search area and is at location '\(location)'")
-  //          })
-  //      }
-  //    }
+      func findNearbyUsers(location: CLLocation, completion: @escaping (_ completionUsers : [Jackie]) -> Void) {
+            let geoFire = GeoFire(firebaseRef: ref.child("users_location"))
+        
+            circleQuery = geoFire!.query(at: location, withRadius: 0.2)
+        
+            var nearbyUsers = [String]();
+        
+            _ = circleQuery!.observe(.keyEntered, with: { (key, location) in
+                if !nearbyUsers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
+                    nearbyUsers.append(key!)
+                    if (nearbyUsers.count >= 10) {
+                      self.usersToJackies(users: nearbyUsers, completion: completion)
+                      return;
+                    }
+                }
+            })
+  
+            circleQuery?.observeReady({
+                for user in nearbyUsers {
+                    self.ref.child("users/\(user)").observe(.value, with: { snapshot in
+                        let value = snapshot as? NSDictionary
+                        print(value)
+                    })
+                }
+                self.usersToJackies(users: nearbyUsers, completion: completion)
+                return
+            })
+
+            //Handle key enter and key exit events with closures
+            var keyEnteredQueryHandle = circleQuery!.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+              print("Key '\(key)' entered the search area and is at location '\(location)'")
+            })
+  
+            var keyExitedQueryHandle = circleQuery!.observe(.keyExited, with: { (key: String!, location: CLLocation!) in
+              print("Key '\(key)' exited the search area and is at location '\(location)'")
+            })
+    }
+  
+  func usersToJackies(users: [String], completion: @escaping (_ completionUsers: [Jackie]) -> Void) -> Void {
+    
+    let geoFire = GeoFire(firebaseRef: ref.child("users_location"))
+    var jackies = [Jackie]();
+    let myGroup = DispatchGroup();
+    
+    for user in users {
+      myGroup.enter()
+      geoFire?.getLocationForKey(user, withCallback: { (location, error) in
+        if (error == nil) {
+          self.ref.child("users").child(user).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            var jackie = Jackie()
+            jackie.coordinate = location!.coordinate
+            let value = snapshot.value as? NSDictionary
+            jackie.firstName = value?["firstName"] as? String ?? ""
+            jackie.lastName = value?["lastName"] as? String ?? ""
+            jackie.phoneNumber = value?["phoneNumber"] as? String ?? ""
+            jackies.append(jackie)
+            myGroup.leave()
+          }) { (error) in
+            print(error.localizedDescription)
+            myGroup.leave()
+          }
+        }
+      })
+    }
+    
+    myGroup.notify(queue: .main){
+      completion(jackies);
+    }
+  }
+  
   
   //    func request(requesting, productType) {
   //      //Change current user state to requesting
