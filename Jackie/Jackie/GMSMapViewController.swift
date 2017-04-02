@@ -8,7 +8,8 @@
 
 import UIKit
 import GoogleMaps
-import PXGoogleDirections
+import GooglePlaces
+import GoogleMapsDirections
 
 class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -27,7 +28,8 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
-        
+        // Show directions
+        showDirectionsToDestination();
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -47,6 +49,29 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
         marker.map = self.mapContainerView
         
         locationManager.stopUpdatingLocation()
+    }
+    
+    func showDirectionsToDestination() {
+        
+        let origin = GoogleMapsDirections.Place.stringDescription(address: "333 Post St, San Francisco, United States")
+        let destination = GoogleMapsDirections.Place.stringDescription(address: "1455 Market St #400, San Francisco, United States")
+        GoogleMapsDirections.direction(fromOrigin: origin, toDestination: destination) { (response, error) -> Void in
+            
+            // Check Status Code
+            guard response?.status == GoogleMapsDirections.StatusCode.ok else {
+                // Status Code is Not OK
+                debugPrint(response?.errorMessage)
+                return
+            }
+            
+            // Draw path on map view
+            let path = GMSMutablePath(fromEncodedPath: (response?.routes[0].overviewPolylinePoints)!)
+            let polyLine = GMSPolyline(path: path)
+            polyLine.strokeWidth = 5
+            polyLine.strokeColor = UIColor.yellow
+            polyLine.map = self.mapContainerView
+            debugPrint("it has \(response?.routes.count ?? 0) routes")
+        }
     }
 
     override func didReceiveMemoryWarning() {

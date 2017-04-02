@@ -9,9 +9,8 @@
 import UIKit
 import Firebase
 import GoogleMaps
-import PXGoogleDirections
-
-
+import GooglePlaces
+import GoogleMapsDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Provide Google Maps API key
         GMSServices.provideAPIKey(gmsAPIKey)
-        directionsAPI = PXGoogleDirections(apiKey: gmsAPIKey) // A valid server-side API key is required here
-
+        GMSPlacesClient.provideAPIKey(gmsAPIKey)
+        GoogleMapsDirections.provide(apiKey: gmsAPIKey)
         return true
     }
 
