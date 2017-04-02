@@ -43,6 +43,11 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate {
 //        marker.title = "Current Location"
 //        marker.snippet = "XXX"
 //        marker.map = self.mapContainerView
+      
+          FirebaseManager.sharedInstance.findNearbyUsers(location: userLocation!) { (successful) in
+            print("completed query")
+            print(successful)
+          }
 
         locationManager.stopUpdatingLocation()
     }
