@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9y-x6-QPi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9y-x6-QPi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -74,18 +74,6 @@
                                 <rect key="frame" x="209" y="132" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-vh-ZCu">
-                                <rect key="frame" x="108" y="455" width="159" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83137254901960789" green="0.23921568627450981" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Jkq-fl-a9C" kind="show" id="OhK-MK-05r"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKz-MD-YNK">
                                 <rect key="frame" x="77" y="506" width="221" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,9 +84,26 @@
                                     <segue destination="R6t-sF-rnL" kind="show" id="Vpm-0g-4Xp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-vh-ZCu">
+                                <rect key="frame" x="108" y="455" width="159" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83137254901960789" green="0.23921568627450981" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonPress:" destination="p9y-x6-QPi" eventType="touchUpInside" id="YcY-zx-haM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="OPK-Sd-z03" id="yWO-he-0Q7"/>
+                        <outlet property="passwordTF" destination="sHJ-Bo-3DF" id="A8E-0S-MXu"/>
+                        <segue destination="Jkq-fl-a9C" kind="show" identifier="loginSegue" id="ZCc-Je-Oyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQI-cs-m6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,11 +210,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83137254901960789" green="0.23921568627450981" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Jkq-fl-a9C" kind="show" id="8yh-jh-aRb"/>
+                                    <action selector="signUpButtonPress:" destination="R6t-sF-rnL" eventType="touchUpInside" id="y4A-da-liP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5n-cD-5Iu">
@@ -222,6 +227,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTF" destination="8Lm-4W-sV5" id="rKI-eb-vec"/>
+                        <outlet property="emailTF" destination="RL4-3e-s3t" id="4M3-m3-clA"/>
+                        <outlet property="firstNameTF" destination="GYO-m1-0xt" id="El5-sw-MBb"/>
+                        <outlet property="lastNameTF" destination="Ol7-eP-PDv" id="Tuc-o0-cw0"/>
+                        <outlet property="passwordTF" destination="q2Q-0X-eNH" id="dxi-VF-9Eh"/>
+                        <outlet property="phoneNumberTF" destination="WcN-Ki-b32" id="rEF-za-8V7"/>
+                        <segue destination="Jkq-fl-a9C" kind="show" identifier="signUpSegue" id="PqJ-A7-Wit"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WU2-mo-ByI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -479,7 +493,7 @@
         <image name="placeholder" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OhK-MK-05r"/>
+        <segue reference="PqJ-A7-Wit"/>
         <segue reference="pXd-G3-yfB"/>
     </inferredMetricsTieBreakers>
 </document>

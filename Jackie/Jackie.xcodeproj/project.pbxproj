@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BFF431E90373F006C519C /* DeliveryViewController.swift */; };
-		173BFF561E90670B006C519C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BFF551E90670B006C519C /* FirebaseManager.swift */; };
 		173BFFC81E907F61006C519C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 173BFFC71E907F61006C519C /* GoogleService-Info.plist */; };
 		174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */; };
 		174F66D41E8FEEAF009A87C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174F66D21E8FEEAE009A87C4 /* Main.storyboard */; };
@@ -21,7 +20,8 @@
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
 		17FF00821E90A5EA001E882A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00811E90A5EA001E882A /* LoginViewController.swift */; };
 		17FF00841E90A5F7001E882A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF00831E90A5F7001E882A /* RegisterViewController.swift */; };
-		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
+		7377BC38FC049FE95A0ADD31 /* Pods_Jackie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */; };
+		FA8CCA921E90B6D200D94F35 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		173BFF431E90373F006C519C /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
-		173BFF551E90670B006C519C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		173BFFC71E907F61006C519C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		174F66CB1E8FEEAE009A87C4 /* Jackie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +61,10 @@
 		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		17FF00811E90A5EA001E882A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17FF00831E90A5F7001E882A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jackie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
-		7ED37CF86E1EB8CF9EC0CB00 /* Pods_JackieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JackieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
+		FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FF00801E9093A8001E882A /* AFNetworking.framework in Frameworks */,
-				8EB8D372098C729B2135F929 /* Pods_Jackie.framework in Frameworks */,
+				7377BC38FC049FE95A0ADD31 /* Pods_Jackie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF4E3A0C91E5247A625103F9 /* Pods_JackieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDA259662F18FAFAD504CF9 /* Pods_JackieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +119,7 @@
 		174F66CD1E8FEEAE009A87C4 /* Jackie */ = {
 			isa = PBXGroup;
 			children = (
-				173BFF551E90670B006C519C /* FirebaseManager.swift */,
+				FA8CCA911E90B6D200D94F35 /* FirebaseManager.swift */,
 				174F66CE1E8FEEAE009A87C4 /* AppDelegate.swift */,
 				174F66D21E8FEEAE009A87C4 /* Main.storyboard */,
 				174F66FE1E8FF90E009A87C4 /* Controllers */,
@@ -169,10 +166,6 @@
 			children = (
 				8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */,
 				7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */,
-				BBBFACC7520D5A17A6E1AC77 /* Pods-JackieTests.debug.xcconfig */,
-				D797199E9F46A47600EE31B7 /* Pods-JackieTests.release.xcconfig */,
-				3584405E29F69FF08CB7251D /* Pods-JackieUITests.debug.xcconfig */,
-				CFFA5638441AB75D79BF0F9D /* Pods-JackieUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -180,8 +173,7 @@
 		652F1FD4619BFC87D38F69C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17FF007F1E9093A8001E882A /* AFNetworking.framework */,
-				1A1F5EA4A1073A1630E54CA9 /* Pods_Jackie.framework */,
+				2C515E30BC4D7A0BB3703455 /* Pods_Jackie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,12 +205,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 174F66F61E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieTests" */;
 			buildPhases = (
-				1E5ADFE980EE263C0519E81C /* [CP] Check Pods Manifest.lock */,
 				174F66DB1E8FEEAF009A87C4 /* Sources */,
 				174F66DC1E8FEEAF009A87C4 /* Frameworks */,
 				174F66DD1E8FEEAF009A87C4 /* Resources */,
-				53C58CE5092E1F2633592D78 /* [CP] Embed Pods Frameworks */,
-				6555D0401E15C82DDF7C8016 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,12 +223,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 174F66F91E8FEEAF009A87C4 /* Build configuration list for PBXNativeTarget "JackieUITests" */;
 			buildPhases = (
-				A8945D6A5676AF15A6FD0806 /* [CP] Check Pods Manifest.lock */,
 				174F66E61E8FEEAF009A87C4 /* Sources */,
 				174F66E71E8FEEAF009A87C4 /* Frameworks */,
 				174F66E81E8FEEAF009A87C4 /* Resources */,
-				5403B182218A269850974203 /* [CP] Embed Pods Frameworks */,
-				6F4CACE3446D88392364AFFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,21 +328,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1E5ADFE980EE263C0519E81C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		4084E72CF58AA0D9ECACDBD9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,51 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackie/Pods-Jackie-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		53C58CE5092E1F2633592D78 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackieTests/Pods-JackieTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5403B182218A269850974203 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackieUITests/Pods-JackieUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6555D0401E15C82DDF7C8016 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackieTests/Pods-JackieTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66F329017FF2250C21B8248C /* [CP] Copy Pods Resources */ = {
@@ -432,36 +358,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jackie/Pods-Jackie-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F4CACE3446D88392364AFFD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JackieUITests/Pods-JackieUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8945D6A5676AF15A6FD0806 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -473,6 +369,7 @@
 				174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */,
 				17FF00841E90A5F7001E882A /* RegisterViewController.swift in Sources */,
 				174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */,
+				FA8CCA921E90B6D200D94F35 /* FirebaseManager.swift in Sources */,
 				173BFF441E90373F006C519C /* DeliveryViewController.swift in Sources */,
 				174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */,
 				174F66CF1E8FEEAE009A87C4 /* AppDelegate.swift in Sources */,
@@ -793,7 +690,6 @@
 		};
 		174F66F71E8FEEAF009A87C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBBFACC7520D5A17A6E1AC77 /* Pods-JackieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -808,7 +704,6 @@
 		};
 		174F66F81E8FEEAF009A87C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D797199E9F46A47600EE31B7 /* Pods-JackieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -823,7 +718,6 @@
 		};
 		174F66FA1E8FEEAF009A87C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3584405E29F69FF08CB7251D /* Pods-JackieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JackieUITests/Info.plist;
@@ -838,7 +732,6 @@
 		};
 		174F66FB1E8FEEAF009A87C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFFA5638441AB75D79BF0F9D /* Pods-JackieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JackieUITests/Info.plist;

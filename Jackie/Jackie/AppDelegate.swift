@@ -8,13 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
 import GoogleMaps
 import GooglePlaces
 import GoogleMapsDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var directionsAPI: PXGoogleDirections!
     var window: UIWindow?
     let gmsAPIKey = "AIzaSyBN34wYGKgPXzkmmD7dx0ngJVHaI5V4BoY"
     
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //GoogleMapsDirections.provide(apiKey: gmsAPIKey)
         
         FIRApp.configure()
-        
+      
         // Provide Google Maps API key
         GMSServices.provideAPIKey(gmsAPIKey)
         GMSPlacesClient.provideAPIKey(gmsAPIKey)

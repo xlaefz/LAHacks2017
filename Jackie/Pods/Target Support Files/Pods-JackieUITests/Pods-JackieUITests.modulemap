@@ -1,6 +1,0 @@
-framework module Pods_JackieUITests {
-  umbrella header "Pods-JackieUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
