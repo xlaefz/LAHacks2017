@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
   @IBAction func signInButtonPress(_ sender: Any) {
       FirebaseManager.sharedInstance.signInUser(email: emailTF.text!, password: passwordTF.text!) { (successful) in
         if (successful) {
-          self.performSegue(withIdentifier: "loginSegue", sender: self)
+          self.performSegue(withIdentifier: "signInSegue", sender: self)
         } else {
           self.showAlert("Invalid Username or Password.")
         }
@@ -37,15 +37,5 @@ class LoginViewController: UIViewController {
     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
     self.present(alertController, animated: true, completion: nil)
   }
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
