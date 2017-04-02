@@ -18,7 +18,6 @@
 		174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66FF1E8FF99B009A87C4 /* MapViewController.swift */; };
 		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
-		1758CEC01E91396800BF5E68 /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1758CEBF1E91393B00BF5E68 /* Lobster_1.3.otf */; };
 		1758CEC61E913B0C00BF5E68 /* FFF_Bold_TRIAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1758CEC11E913B0C00BF5E68 /* FFF_Bold_TRIAL.ttf */; };
 		1758CEC71E913B0C00BF5E68 /* FFF_Light_TRIAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1758CEC21E913B0C00BF5E68 /* FFF_Light_TRIAL.ttf */; };
 		1758CEC81E913B0C00BF5E68 /* FFF_Medium_TRIAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1758CEC31E913B0C00BF5E68 /* FFF_Medium_TRIAL.ttf */; };
@@ -70,7 +69,6 @@
 		174F66FF1E8FF99B009A87C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		174F67011E90187E009A87C4 /* GMSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
 		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
-		1758CEBF1E91393B00BF5E68 /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lobster_1.3.otf; path = ../../../Lobster_1.3.otf; sourceTree = "<group>"; };
 		1758CEC11E913B0C00BF5E68 /* FFF_Bold_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FFF_Bold_TRIAL.ttf; sourceTree = "<group>"; };
 		1758CEC21E913B0C00BF5E68 /* FFF_Light_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FFF_Light_TRIAL.ttf; sourceTree = "<group>"; };
 		1758CEC31E913B0C00BF5E68 /* FFF_Medium_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FFF_Medium_TRIAL.ttf; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		1758CEBE1E91392700BF5E68 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1758CEBF1E91393B00BF5E68 /* Lobster_1.3.otf */,
 				1758CEC11E913B0C00BF5E68 /* FFF_Bold_TRIAL.ttf */,
 				1758CEC21E913B0C00BF5E68 /* FFF_Light_TRIAL.ttf */,
 				1758CEC31E913B0C00BF5E68 /* FFF_Medium_TRIAL.ttf */,
@@ -334,7 +331,6 @@
 				174F66D91E8FEEAF009A87C4 /* LaunchScreen.storyboard in Resources */,
 				FA8CCA941E90D16700D94F35 /* geofire-objc in Resources */,
 				1758CECC1E913B1800BF5E68 /* BebasNeue.otf in Resources */,
-				1758CEC01E91396800BF5E68 /* Lobster_1.3.otf in Resources */,
 				1758CECE1E913B2300BF5E68 /* BEBAS___.TTF in Resources */,
 				1758CEC91E913B0C00BF5E68 /* FFF_Regular_TRIAL.ttf in Resources */,
 				1758CEC81E913B0C00BF5E68 /* FFF_Medium_TRIAL.ttf in Resources */,
