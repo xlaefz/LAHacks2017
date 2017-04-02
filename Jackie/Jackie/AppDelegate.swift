@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import GoogleMapsDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Provide Google Maps API key
         GMSServices.provideAPIKey(gmsAPIKey)
         GMSPlacesClient.provideAPIKey(gmsAPIKey)
-        
+        GoogleMapsDirections.provide(apiKey: gmsAPIKey)
         return true
     }
 

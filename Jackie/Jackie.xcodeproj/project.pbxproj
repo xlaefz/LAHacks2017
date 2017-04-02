@@ -18,7 +18,8 @@
 		174F67001E8FF99B009A87C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F66FF1E8FF99B009A87C4 /* MapViewController.swift */; };
 		174F67021E90187E009A87C4 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67011E90187E009A87C4 /* GMSMapViewController.swift */; };
 		174F67081E9020DA009A87C4 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F67071E9020DA009A87C4 /* RequestViewController.swift */; };
-		1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */; };
+		17FF00801E9093A8001E882A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FF007F1E9093A8001E882A /* AFNetworking.framework */; };
+		8EB8D372098C729B2135F929 /* Pods_Jackie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1F5EA4A1073A1630E54CA9 /* Pods_Jackie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		174F66FF1E8FF99B009A87C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		174F67011E90187E009A87C4 /* GMSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
 		174F67071E9020DA009A87C4 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		17FF007F1E9093A8001E882A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
+		1A1F5EA4A1073A1630E54CA9 /* Pods_Jackie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jackie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.release.xcconfig"; sourceTree = "<group>"; };
 		8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jackie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jackie/Pods-Jackie.debug.xcconfig"; sourceTree = "<group>"; };
-		FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jackie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C5BE34CBFBA4501306BFAB6 /* libPods-Jackie.a in Frameworks */,
+				17FF00801E9093A8001E882A /* AFNetworking.framework in Frameworks */,
+				8EB8D372098C729B2135F929 /* Pods_Jackie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +167,8 @@
 		652F1FD4619BFC87D38F69C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB6E379E83976DD6797C51A1 /* libPods-Jackie.a */,
+				17FF007F1E9093A8001E882A /* AFNetworking.framework */,
+				1A1F5EA4A1073A1630E54CA9 /* Pods_Jackie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -512,7 +516,12 @@
 			baseConfigurationReference = 8C6DADF7C199716C0A925C34 /* Pods-Jackie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
+				);
 				INFOPLIST_FILE = Jackie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,7 +534,12 @@
 			baseConfigurationReference = 7CF0E3AB49A3F295078E9A60 /* Pods-Jackie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
+				);
 				INFOPLIST_FILE = Jackie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Jackie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
